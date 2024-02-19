@@ -7,8 +7,8 @@ import (
 	"github.com/aaron0922/go-modules/pkg/model"
 )
 
-func GetUserByID() *model.Device {
-	device, err := model.GetDeviceByID(1)
+func GetDeviceByID(id int) *model.Device {
+	device, err := model.GetDeviceByID(id)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return nil
@@ -16,8 +16,8 @@ func GetUserByID() *model.Device {
 	return device
 }
 
-func GetDeviceByID() *user.User {
-	user, err := user.GetUserByID(1)
+func GetUserByID(id int) *user.User {
+	user, err := user.GetUserByID(id)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return nil
